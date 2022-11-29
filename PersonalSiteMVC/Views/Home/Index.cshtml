@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
 <!-- home section -->
@@ -12,7 +12,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 col-sm-4">
-				<img src="images/MyPicture.JPG" class="img-responsive" alt="about img">
+				<img src="~/images/MyPicture.JPG" class="img-responsive" alt="about img">
 			</div>
 			<div class="col-md-8 col-sm-8 about-des text-center">
 				<h2>A little about myself!</h2>
@@ -24,7 +24,7 @@
 					I discovered my interest and passion for software development and coding. Since then I am
 					now pursuing my goal to be a full stack developer at Centriq Training.
 				</p>
-				<a href="contact.html" class="btn btn-default">Contact Me!</a>
+				@Html.ActionLink("Contact Me!", "Contact", "Home", null, new { @class = "btn btn-default" })
 			</div>
 		</div>
 	</div>
@@ -86,22 +86,22 @@
 			<h2>My Badges!</h2>
 			<ul class="flip-items">
 				<li data-flip-title="Title 1">
-					<img src="/images/coming_soon.jpg">
+					<img src="~/images/coming_soon.jpg">
 				</li>
 				<li data-flip-title="Title 2">
-					<img src="/images/coming_soon.jpg">
+					<img src="~/images/coming_soon.jpg">
 				</li>
 				<li data-flip-title="Title 3">
-					<img src="/images/coming_soon.jpg">
+					<img src="~/images/coming_soon.jpg">
 				</li>
 				<li data-flip-title="Title 4">
-					<img src="/images/coming_soon.jpg">
+					<img src="~/images/coming_soon.jpg">
 				</li>
 				<li data-flip-title="Title 5">
-					<img src="/images/coming_soon.jpg">
+					<img src="~/images/coming_soon.jpg">
 				</li>
 				<li data-flip-title="Title 6">
-					<img src="/images/coming_soon.jpg">
+					<img src="~/images/coming_soon.jpg">
 				</li>
 			</ul>
 		</div>
@@ -121,12 +121,12 @@
 
 		<div class="col">
 			<a href="https://github.com/J-Cundiff/DungeonApplication" target="_blank" data-lightbox-gallery="portfolio-gallery">
-				<img src="images/Dungeon_image.png" alt="portfolio img">
+				<img src="~/images/Dungeon_image.png" alt="portfolio img">
 			</a>
 		</div>
 
 		<div class="col-md-12 col-sm-12" id="viewMore">
-			<a href="portfolio.html" class="btn btn-default">View More</a>
+			@Html.ActionLink("View More!", "Portfolio", "Home", null, new { @class = "btn btn-default"} )
 		</div>
 
 	</div>

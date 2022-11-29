@@ -206,7 +206,6 @@ div#about p {
 .divider .divider-two {
   background: #009988;
   border-radius: 15%;
-  padding-bottom: 10px;
   }
 .divider .divider-three {
   background: #ffa500;
@@ -559,6 +558,13 @@ footer a:hover {
  
 }
 
+@media (max-width: 1200px){
+    .divider .divider-two {
+        background: #009988;
+        border-radius: 15%;
+        padding-bottom: 10px;
+    }
+}
 
 @media (max-width: 767px){
   #team div.col-xs-9 {
@@ -571,4 +577,4 @@ footer a:hover {
     display: none;
   }
 
-};
+}
