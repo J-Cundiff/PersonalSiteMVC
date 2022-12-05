@@ -86,6 +86,7 @@ img {
     margin: 0 !important;
     position: relative;
     top: 20px;
+    border-radius: 5px;
   }
 .navbar-default .navbar-brand {
     font-size: 40px;
@@ -206,6 +207,7 @@ div#about p {
 .divider .divider-two {
   background: #009988;
   border-radius: 15%;
+  padding-bottom: 10px;
   }
 .divider .divider-three {
   background: #ffa500;
@@ -248,6 +250,7 @@ div#about p {
 }
 #about .container {
   background: #191919;
+  border-radius: 10px;
 }
 #about .col-md-6 {
   padding: 0;
@@ -265,8 +268,9 @@ div#about p {
 
 /* team section */
 #team {
-  padding-top: 60px;
-  padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    text-align: center;
 }
 #team h2 {
   padding-bottom: 30px;
@@ -338,6 +342,8 @@ div#about p {
   border-radius: 10px;
 }
 
+
+
 #projects img {
   border-radius: 10px;
 }
@@ -376,13 +382,14 @@ div#about p {
 
 #resume .container {
   background: #191919;
+  border-radius: 10px;
   width: 90%;
 }
 
 #resume .container article h2{
   text-align: center;
   text-decoration: underline;
-  color: #ffffff;
+  color: #ffffffc2;
 } 
 
 #resume .container p {
@@ -417,7 +424,7 @@ div#about p {
 }
 #contact h2 {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 #contact .form-control {
   background: #202020;
@@ -428,11 +435,19 @@ div#about p {
   transition: all 0.4s ease-in;
   color: #fff;
 }
+#contact .about-des {
+    background: #191919;
+    border-radius: 10px;
+}
+
+#contact input{
+    margin-bottom: 15px;
+}
 #contact .form-control:focus {
   background: #404040;
 }
 #contact input {
-  height: 53px;
+  height: 45px;
 }
 .form-control::-moz-placeholder {
   color: #fff;
@@ -544,6 +559,22 @@ footer a:hover {
   footer h3 {
     padding-top: 30px;
   }
+
+  #projects{
+      width: 90%;
+      margin-left: 1.5em;
+  }
+
+    #projectDisplay {
+        display:flex;
+        flex-direction: column-reverse;
+    }
+
+    #contact .about-des {
+        background: #191919;
+        border-radius: 10px;
+        width: 90%;
+    }
 
 
   .divider .divider-two ul li {

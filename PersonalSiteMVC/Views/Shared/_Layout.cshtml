@@ -96,5 +96,28 @@ http://www.templatemo.com/tm-468-onetel
 <script src="~/js/nivo-lightbox.min.js"></script>
 <script src="~/js/jquery.flipster.min.js"></script>
 <script src="~/js/custom.js"></script>
+
+	<script>
+
+		//For each <li> in the <nav class="menu">, apply the following function
+
+		$('.collapse li').each(function () {
+
+			//If the <a> tag inside a <li> is linked to the current URL
+
+			if ($(this).find('a').attr('href') == window.location.pathname) {
+
+				//Add the "active" class
+
+				$(this).addClass('active');
+
+			}
+
+		});
+
+	</script>
+
+	@RenderSection("scripts", required: false)
+
 </body>
 </html>

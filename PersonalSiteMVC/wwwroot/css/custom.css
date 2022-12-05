@@ -2,3 +2,29 @@
     padding-bottom: 25px;
     color: #1077a5;
 }
+
+@keyframes buttonAnimate {
+    0% {
+        background-color: #009988;
+    }
+
+    25% {
+        background-color: #c14000;
+    }
+
+    50% {
+        background-color: #ffa500;
+    }
+
+    100% {background-color: #009988;}
+}
+
+.btn:hover {
+    background: #009988;
+    border-color: transparent;/*
+    -may add color chnage back in
+    animation-name:buttonAnimate;
+    animation-duration: 4s;*/
+    transform: rotate(360deg);
+    animation-delay: 0.5s;
+}

@@ -1,59 +1,91 @@
-﻿@{
+﻿@model PersonalSiteMVC.Models.ContactViewModel
+
+@{
     ViewData["Title"] = "Contact";
 }
 
 <!-- contact header section -->
 <div id="contact-header">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 col-sm-12"></div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12"></div>
+        </div>
+    </div>
 </div>
 
-<!-- contact section -->
 <div id="contact">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-offset-2 col-md-8 col-sm-12">
-				<h2>Get in touch</h2>
-                <p>Comming Soon!</p>
-			</div>
-			<div class="col-md-8 col-sm-8 mt30">
-				<form action="#" method="post" role="form">
-					<div class="col-md-6 col-sm-6">
-                        <label for="name">NAME</label>
-                        <input name="name" type="text" class="form-control" id="name">
-                      <label for="email">EMAIL</label>
-                        <input name="email" type="email" class="form-control" id="email">
-					</div>
-					<div class="col-md-6 col-sm-6">
-						<label for="message">MESSAGE</label>
-						<textarea name="message" rows="6" class="form-control" id="message" placeholder="This section is currently under construction"></textarea>
-					</div>
+    <div class="container about-des">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 col-sm-12 text-center">
+                <h2>Get in touch!</h2>
+            </div>
+            <div class="col-md-8 col-sm-8 mt30">
+                <form asp-action="Contact">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="col-md-6 col-sm-6">
-                    	<button type="submit" name="submit" class="btn btn-default">SEND</button>
+                        <div>
+                            <label asp-for="Name">Name</label>
+                            <input asp-for="Name" class="form-control" id="name" placeholder="Enter Here..." />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Email">Email</label>
+                            <input asp-for="Email" class="form-control" id="email" placeholder="Enter Here..." />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    
+                        <div class="form-group mt-3">
+                            <label asp-for="Subject">Subject</label>
+                            <input asp-for="Subject" class="form-control" id="subject" placeholder="Enter here..." />
+                            <span asp-validation-for="Subject" class="text-danger"></span>
+                        </div>
                     </div>
-				</form>
-			</div>
-			<div class="col-md-4 col-sm-4 address">
-				<div>
-					<h3>Email</h3>
-					<p>jd.cundiff@outlook.com</p>
-				</div>
-				<div>
-					<h3>Phone</h3>
-					<p>816-447-6450</p>
-				</div>
-			</div>
+                    <div class="col-md-6 col-sm-6">
+                        <label asp-for="Message" class="control-label">Message</label>
+                        <textarea asp-for="Message" rows="10" class="form-control" id="message" placeholder="Enter your message here..."></textarea>
+                        <span asp-validation-for="Message" class="text-danger"></span>
+                    
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <input type="submit" name="submit" value="Send" class="btn btn-default" />
+                    </div> 
+                </form>
+            </div>        
+                <div class="col-md-4 col-sm-4 address">
+                    <div>
+                        <h3>Email</h3>
+                        <p>jd.cundiff@outlook.com</p>
+                    </div>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>816-447-6450</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
 
-			<!-- Location Map Below -->
-			 <div class="col-md-12 col-sm-12 mt20">
-            	<h3>Location</h3>
-				<div class="google_map mt20">
-					<div id="map-canvas"></div>
-				</div> 
-			</div>
-		</div>
-	</div>
-</div>	
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <!-- Location Map Below -->
+            <div class="col-md-12 col-sm-12">
+                <h3>Location</h3>
+                <div class="google_map mt20">
+                    <div id="map-canvas"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+   
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
