@@ -134,7 +134,7 @@ img {
 #home {
   background: url('../images/home_image.jpg') no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position:center;
   min-height: 500px;
   padding-top: 180px;
   padding-bottom: 100px;
@@ -322,26 +322,23 @@ div#about p {
   padding-top: 160px;
 }
 #projects {
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 60px;
-  display: flex;
-  justify-content: space-between;
-  }
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding: 40px 0 40px 0;
+}
 #projects h2 {
   padding-bottom: 20px;
 }
 
-#projects {
-  padding-top: 60px;
-  padding: 40px 0 40px 0;
-}
 #projects .project {
   background: #2b292e;
   margin-bottom: 25px;
   border-radius: 10px;
 }
-
 
 
 #projects img {
@@ -356,9 +353,9 @@ div#about p {
   padding-left: 30px;
   padding-right: 20px;
 }
-/* #projects .btn {
-  margin-top: 30px;
-} */
+ #projects .btn {
+  margin-bottom: 10px;
+}
 
 
 /*Resume section */
@@ -405,6 +402,9 @@ div#about p {
   padding-bottom: 35px;
 }
 
+#resumeHead h2{
+    color: #ffffffc2;
+}
 
 
 
@@ -464,6 +464,7 @@ div#about p {
     border: none;
     width: 100%;
     height: 300px;
+    margin-bottom: 15px;
   }
 
 /* footer section */
