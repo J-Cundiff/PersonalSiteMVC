@@ -19,15 +19,15 @@
     100% {background-color: #009988;}
 }
 
-.btn:hover {
+/*.btn:hover {
     background: #009988;
-    border-color: transparent;/*
+    border-color: transparent;*//*
     -may add color chnage back in
     animation-name:buttonAnimate;
     animation-duration: 4s;*/
-    transform: rotate(360deg);
+    /*transform: rotate(360deg);
     animation-delay: 0.5s;
-}
+}*/
 
 @import url("https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap");
 

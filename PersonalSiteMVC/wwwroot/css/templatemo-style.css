@@ -343,6 +343,7 @@ div#about p {
 
 #projects img {
   border-radius: 10px;
+  height: 100%;
 }
 #projects .col-md-6 {
   padding: 0;
